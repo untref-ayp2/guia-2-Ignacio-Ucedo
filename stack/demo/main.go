@@ -6,17 +6,16 @@ import (
 )
 
 func main() {
-	var s stack.Stack
+	var s stack.Stack[string]
 	cadena := "Hola Mundo"
 	for _, v := range cadena {
 		s.Push(string(v))
 	}
 
-	c, err := s.Pop()
+	_, err := s.Pop()
 	for err == nil {
-		fmt.Printf("%s", c)
-		c, err = s.Pop()
+		_, err = s.Pop()
+		fmt.Printf("%v\n", err)
 	}
-	fmt.Println()
 
 }

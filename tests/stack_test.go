@@ -6,19 +6,21 @@ import (
 )
 
 func TestPush(t *testing.T) {
-	var s stack.Stack
+	var s stack.Stack[int]
 
 	s.Push(1)
 	s.Push(2)
 	s.Push(3)
 
-	if s[0] != 1 || s[1] != 2 || s[2] != 3 {
+	v, _ := s.Top()
+
+	if v != 3 {
 		t.Error("Error en Push")
 	}
 }
 
 func TestPop(t *testing.T) {
-	var s stack.Stack
+	var s stack.Stack[int]
 
 	s.Push(1)
 	s.Push(2)

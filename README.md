@@ -37,7 +37,7 @@ func (q *QueueS) Front() (any, error) {
 ### Usos de pilas y colas
 Carpeta `ejercicios`
 
-1. Escribir una función que que reciba una cadena de caracteres y devuelva la cadena invertida. Analizar el orden.
+1. Escribir una función que reciba una cadena de caracteres y devuelva la cadena invertida. Analizar el orden.
 
 ```go
 func InvertirCadena(string)(string) {
